@@ -1,0 +1,92 @@
+html,
+body {
+
+background: #4B79A1;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+  height: 100%;
+}
+
+body {
+  perspective: 300px;
+  
+  overflow-y:hidden;
+  overflow-x:hidden;
+  
+}
+
+#vr {
+  animation-name: animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-image: url("Controller.png");
+  background-size: cover;
+  margin-left: -250px;
+  margin-top: -250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes animationPosition {
+  10% {
+    transform: translateX(-70px);
+  }
+  20% {
+    transform: translateX(70px);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateY(-70px);
+  }
+  50% {
+    transform: translateY(70px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateZ(-70px);
+  }
+  80% {
+    transform: translateZ(70px);
+  }
+  90% {
+    transform: translateZ(0);
+  }
+}
+@keyframes animation {
+  10% {
+    transform: rotateZ(-45deg);
+  }
+  20% {
+    transform: rotateZ(45deg);
+  }
+  30% {
+    transform: rotateZ(0deg);
+  }
+  40% {
+    transform: rotateX(-45deg);
+  }
+  50% {
+    transform: rotateX(45deg);
+  }
+  60% {
+    transform: rotateX(0deg);
+  }
+  70% {
+    transform: rotateY(-45deg);
+  }
+  80% {
+    transform: rotateY(45deg);
+  }
+  90% {
+    transform: rotateY(0deg);
+  }
+}
